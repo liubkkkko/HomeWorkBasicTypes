@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 )
 
 func main() {
@@ -17,9 +16,8 @@ func main() {
 	appleCost := float64(amountApples) * applePrice
 	pearCost := float64(amountPears) * pearPrice
 	fruitCost := appleCost + pearCost
-	applePriceRound := math.Round(applePrice)
-	numbersPears := int(myMoney) / int(pearPrice)
-	numbersApples := int(myMoney) / int(applePriceRound)
+	numbersPears := int((myMoney) / (pearPrice))
+	numbersApples := int((myMoney) / (applePrice))
 	priceTwoApples := applePrice * 2
 	priceTwoPears := pearPrice * 2
 	priceFourFruits := priceTwoApples + priceTwoPears
@@ -32,3 +30,4 @@ func main() {
 	fmt.Println("4. Чи ми можемо купити 2 груші та 2 яблука? --", solvency)
 
 }
+
